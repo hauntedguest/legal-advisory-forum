@@ -2121,3 +2121,175 @@ button{
 		width: 141px;
 	}
 }
+
+#rzp-button1 {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    font-size: 15px !important;
+    text-transform: uppercase;
+    font-weight: 550;
+    line-height: 30px;
+    text-align: center;
+    padding: 7px 12px;
+    margin-top: 25px;
+    border: 2px solid transparent;
+    background: #323031;
+    box-shadow: inset 5px 5px 10px #070707, inset -5px -5px 10px #000000;
+    border-radius: 30px !important;
+}
+
+#rzp-button1:hover {
+    background-color: #0011ff;
+}
+
+#rzp-button2 {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    font-size: 15px !important;
+    text-transform: uppercase;
+    font-weight: 550;
+    line-height: 30px;
+    text-align: center;
+    padding: 7px 12px;
+    margin-top: 25px;
+    border: 2px solid transparent;
+    background: #323031;
+    box-shadow: inset 5px 5px 10px #070707, inset -5px -5px 10px #000000;
+    border-radius: 30px !important;
+}
+
+#rzp-button2:hover {
+    background-color: #0011ff;
+}
+
+#rzp-button3 {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    font-size: 15px !important;
+    text-transform: uppercase;
+    font-weight: 550;
+    line-height: 30px;
+    text-align: center;
+    padding: 7px 12px;
+    margin-top: 25px;
+    border: 2px solid transparent;
+    background: #323031;
+    box-shadow: inset 5px 5px 10px #070707, inset -5px -5px 10px #000000;
+    border-radius: 30px !important;
+}
+
+#rzp-button3:hover {
+    background-color: #0011ff;
+}
+
+#rzp-button4 {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    font-size: 15px !important;
+    text-transform: uppercase;
+    font-weight: 550;
+    line-height: 30px;
+    text-align: center;
+    padding: 7px 12px;
+    margin-top: 25px;
+    border: 2px solid transparent;
+    background: #323031;
+    box-shadow: inset 5px 5px 10px #070707, inset -5px -5px 10px #000000;
+    border-radius: 30px !important;
+}
+
+#rzp-button4:hover {
+    background-color: #0011ff;
+}
+
+#rzp-button5 {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    font-size: 15px !important;
+    text-transform: uppercase;
+    font-weight: 550;
+    line-height: 30px;
+    text-align: center;
+    padding: 7px 12px;
+    margin-top: 25px;
+    border: 2px solid transparent;
+    background: #323031;
+    box-shadow: inset 5px 5px 10px #070707, inset -5px -5px 10px #000000;
+    border-radius: 30px !important;
+}
+
+#rzp-button5:hover {
+    background-color: #0011ff;
+}
+
+#rzp-button6 {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    font-size: 15px !important;
+    text-transform: uppercase;
+    font-weight: 550;
+    line-height: 30px;
+    text-align: center;
+    padding: 7px 12px;
+    margin-top: 25px;
+    border: 2px solid transparent;
+    background: #323031;
+    box-shadow: inset 5px 5px 10px #070707, inset -5px -5px 10px #000000;
+    border-radius: 30px !important;
+}
+
+#rzp-button6:hover {
+    background-color: #0011ff;
+}
+
+#button {
+    display: inline-block;
+    background-color: #000000;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+#button::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+}
+
+#button:hover {
+    cursor: pointer;
+    background-color: rgb(255, 0, 0);
+}
+
+#button:active {
+    background-color: rgb(255, 0, 0);
+}
+
+#button.show {
+    opacity: 1;
+    visibility: visible;
+}
