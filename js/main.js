@@ -119,19 +119,43 @@ if ($("section").is(".call-us")){
 
 
 /* Yandex Map */
+// if ($("div").is("#map")){
+//     ymaps.ready(init);
+//     function init(){
+//         var myMap = new ymaps.Map("map", {
+//             center:[30.9129557,76.392496],
+//             zoom: 18,
+//             controls: ['zoomControl']
+//         });
+//         var myPlacemark = new ymaps.Placemark([30.912955,76.392496 ],{} , {
+//             iconImageSize : [32, 40]
+//         })
+
+//        myMap.geoObjects.add(myPlacemark);
+//     }
+// }
+
 if ($("div").is("#map")){
     ymaps.ready(init);
     function init(){
         var myMap = new ymaps.Map("map", {
-            center:[55.80285820428499,37.5843422637293],
-            zoom: 18,
+            center: [30.326, 76.400], // Centered at Patiala, Punjab
+            zoom: 10,
             controls: ['zoomControl']
         });
-        var myPlacemark = new ymaps.Placemark([55.802797775283615,37.583765468365584],{} , {
-            iconImageSize : [32, 40]
-        })
 
-       myMap.geoObjects.add(myPlacemark);
+        var thaparUniversityCoords = [30.326, 76.400]; // Coordinates for Thapar University
+
+        var thaparMarker = new ymaps.Placemark(thaparUniversityCoords, {
+            hintContent: 'Thapar University, Patiala', // Hint displayed when hovering over the marker
+            balloonContent: 'Thapar University, Patiala, Punjab' // Additional information in the balloon when clicking the marker
+        }, {
+            iconImageSize: [32, 40]
+        });
+
+        myMap.geoObjects.add(thaparMarker);
     }
 }
+
+
 /* Yandex Map  END*/
