@@ -1,26 +1,23 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
 <head>
-	<!--<meta property="og:title" content="Услуги">
-	<meta property="og:description" content="Мы современная Юридическая фирма, помогающая перспективным стартапам, фрилансерам и малому бизнесу.">
-	<meta property="og:type" content="website">
-	<meta property="og:image" content="https://github.com/iamkirabond/legalAdvisoryServices.github.io/blob/master/img/legal-logo.png" >
-	<meta property="og:site_name" content="Legal Advisory Services">
-	<link rel="shortcut icon" type="image/png" href="../img/favicon.png"/>-->
-	<!-- Bootstrap Grid CSS -->
+	
+	Bootstrap Grid CSS
 	<link rel="stylesheet" href="../css/bootstrap-grid.min.css">
 	<!-- Main CSS -->
 	<link rel="stylesheet" href="../css/style.css">
-
+  
 	<meta name="description" content="#">
 	<meta name="keywords" content="#">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Услуги</title>
+
+	<title>Services</title>
+	
 </head>
 <body>
 	<!---Preloader: Start-->
-	<div id="page-preloader">
+	<div id="page-preloader">col-12
 		<span class="spinner"></span>
 	</div>
 	<!---Preloader: End-->
@@ -38,7 +35,7 @@
 						<nav>
 							<ul class="menu">
 								<li class="menu__item">
-									<a href="../index.html">Home/a>
+									<a href="../index.html">Home</a>
 								</li>
 								<li class="menu__item">
 									<a href="about.html">About</a>
@@ -175,9 +172,52 @@
 								Services in the field of corporate governance, capital markets, M&A
 							</p>
 							<span class="service-card__price">₹2350</span>
-							<button class="service-card__btn btn">
-								More details
-							</button>
+							<div>
+								<form>
+								  <button  class="service-card__btn btn" id="rzp-button1">
+									<i class="fas fa-donate"></i>&nbsp;&nbsp;Book Now!
+								  </button>
+								  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+								  <script>
+									var options = {
+									  key: "rzp_test_aIfnpuWEudWnID", // Enter the Key ID generated from the Dashboard
+									  amount: "235000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+									  currency: "INR",
+									  name: "Pranav Gupta",
+									  description: "Corporate practice, M&A",
+									  handler: function (response) {
+										console.log('Payment response:', response);
+										if (
+										  typeof response.razorpay_payment_id == "undefined" ||
+										  response.razorpay_payment_id < 1
+										) {
+										  swal({
+											title: "Please try again later!",
+											icon: "error",
+											button: "Close",
+										  });
+										} else {
+										  swal({
+											title: "Thank You!",
+											icon: "success",
+											button: "Close",
+										  });
+										}
+									  },
+									  theme: {
+										color: "#3399cc",
+									  },
+									};
+									var rzp1 = new Razorpay(options);
+									document.getElementById("rzp-button1").onclick = function (
+									  e1
+									) {
+									  rzp1.open();
+									  e1.preventDefault();
+									};
+									</script>
+								</form>	
+							</div>
 						</div>	
 					</div>
 					<div class="col-12 col-md-6 col-xl-4 d-flex justify-content-center">
@@ -189,9 +229,53 @@
 								Full range of services in the field of intellectual property
 							</p>
 							<span class="service-card__price">₹3390</span>
-							<button class="service-card__btn btn">
-								More details
-							</button>
+							<div>
+								<form>
+								  <button class="service-card__btn btn" id="rzp-button2">
+									<i class="fas fa-donate"></i>&nbsp;&nbsp;Book Now!
+								  </button>
+								  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+								  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+								  <script>
+									var options2 = {
+									  key: "rzp_test_aIfnpuWEudWnID", // Enter the Key ID generated from the Dashboard
+									  amount: "339000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+									  currency: "INR",
+									  name: "Pranav Gupta",
+									  description: "Intellectual property",
+									  handler: function (responsess) {
+										if (
+										  typeof responsess.razorpay_payment_id == "undefined" ||
+										  responsess.razorpay_payment_id < 1
+										) {
+										  swal({
+											title: "Please try again later!",
+											icon: "error",
+											button: "Close",
+										  });
+										} else {
+										  swal({
+											title: "Thank You!",
+											icon: "success",
+											button: "Close",
+										  });
+										}
+									  },
+									  theme: {
+										color: "#3399cc",
+									  },
+									};
+									var rzp2 = new Razorpay(options2);
+									document.getElementById("rzp-button2").onclick = function (
+									  e
+									) {
+									  rzp2.open();
+									  e.preventDefault();
+									};
+								  </script>
+								</form>
+							</div>
 						</div>	
 					</div>
 					<div class="col-12 col-md-6 col-xl-4 d-flex justify-content-center">
@@ -203,9 +287,51 @@
 								Full range of legal services to support Internet projects
 							</p>
 							<span class="service-card__price">₹3480</span>
-							<button class="service-card__btn btn">
-								More details
-							</button>
+							<div>
+								<form>
+								  <button class="service-card__btn btn" id="rzp-button3">
+									<i class="fas fa-donate"></i>&nbsp;&nbsp;Book Now!
+								  </button>
+								 
+								  <script>
+									var options3 = {
+									  key: "rzp_test_aIfnpuWEudWnID", // Enter the Key ID generated from the Dashboard
+									  amount: "348000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+									  currency: "INR",
+									  name: "Pranav Gupta",
+									  description: "Internet business and digital economy",
+									  handler: function (responsesss) {
+										if (
+										  typeof responsesss.razorpay_payment_id == "undefined" ||
+										  responsesss.razorpay_payment_id < 1
+										) {
+										  swal({
+											title: "Please try again later!",
+											icon: "error",
+											button: "Close",
+										  });
+										} else {
+										  swal({
+											title: "Thank You!",
+											icon: "success",
+											button: "Close",
+										  });
+										}
+									  },
+									  theme: {
+										color: "#3399cc",
+									  },
+									};
+									var rzp3 = new Razorpay(options3);
+									document.getElementById("rzp-button3").onclick = function (
+									  e
+									) {
+									  rzp3.open();
+									  e.preventDefault();
+									};
+								  </script>
+								</form>
+							</div>
 						</div>	
 					</div>
 					<div class="col-12 col-md-6 col-xl-4 d-flex justify-content-center">
@@ -217,9 +343,51 @@
 								Comprehensive legal support for businesses in the field of communications, media, advertising
 							</p>
 							<span class="service-card__price">₹5525</span>
-							<button class="service-card__btn btn">
-								More details
-							</button>
+							<div>
+								<form>
+								  <button class="service-card__btn btn" id="rzp-button4">
+									<i class="fas fa-donate"></i>&nbsp;&nbsp;Book Now!
+								  </button>
+								  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+								  <script>
+									var options4 = {
+									  key: "rzp_test_aIfnpuWEudWnID", // Enter the Key ID generated from the Dashboard
+									  amount: "552500", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+									  currency: "INR",
+									  name: "Pranav Gupta",
+									  description: "Information Technology",
+									  handler: function (responsessss) {
+										if (
+										  typeof responsessss.razorpay_payment_id == "undefined" ||
+										  responsessss.razorpay_payment_id < 1
+										) {
+										  swal({
+											title: "Please try again later!",
+											icon: "error",
+											button: "Close",
+										  });
+										} else {
+										  swal({
+											title: "Thank You!",
+											icon: "success",
+											button: "Close",
+										  });
+										}
+									  },
+									  theme: {
+										color: "#3399cc",
+									  },
+									};
+									var rzp4 = new Razorpay(options4);
+									document.getElementById("rzp-button4").onclick = function (
+									  e
+									) {
+									  rzp4.open();
+									  e.preventDefault();
+									};
+								  </script>
+								</form>
+							</div>
 						</div>	
 					</div>
 					<div class="col-12 col-md-6 col-xl-4 d-flex justify-content-center">
@@ -231,9 +399,51 @@
 								Resolving issues related to business regulation
 							</p>
 							<span class="service-card__price">₹2345</span>
-							<button class="service-card__btn btn">
-								More details
-							</button>
+							<div>
+								<form>
+								  <button class="service-card__btn btn" id="rzp-button5">
+									<i class="fas fa-donate"></i>&nbsp;&nbsp;Book Now!
+								  </button>
+								  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+								  <script>
+									var options5 = {
+									  key: "rzp_test_aIfnpuWEudWnID", // Enter the Key ID generated from the Dashboard
+									  amount: "234500", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+									  currency: "INR",
+									  name: "Pranav Gupta",
+									  description: "Government Relations",
+									  handler: function (responsesssss) {
+										if (
+										  typeof responsesssss.razorpay_payment_id == "undefined" ||
+										  responsesssss.razorpay_payment_id < 1
+										) {
+										  swal({
+											title: "Please try again later!",
+											icon: "error",
+											button: "Close",
+										  });
+										} else {
+										  swal({
+											title: "Thank You!",
+											icon: "success",
+											button: "Close",
+										  });
+										}
+									  },
+									  theme: {
+										color: "#3399cc",
+									  },
+									};
+									var rzp5 = new Razorpay(options5);
+									document.getElementById("rzp-button5").onclick = function (
+									  e
+									) {
+									  rzp5.open();
+									  e.preventDefault();
+									};
+								  </script>
+								</form>
+							</div>
 						</div>	
 					</div>
 					<div class="col-12 col-md-6 col-xl-4 d-flex justify-content-center">
@@ -245,9 +455,51 @@
 								Services for comprehensive legal support for business
 							</p>
 							<span class="service-card__price">₹3410</span>
-							<button class="service-card__btn btn">
-								More details
-							</button>
+							<div>
+								<form>
+								  <button class="service-card__btn btn" id="rzp-button6">
+									<i class="fas fa-donate"></i>&nbsp;&nbsp;Book Now!
+								  </button>
+								  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+								  <script>
+									var options6 = {
+									  key: "rzp_test_aIfnpuWEudWnID", // Enter the Key ID generated from the Dashboard
+									  amount: "341000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+									  currency: "INR",
+									  name: "Pranav Gupta",
+									  description: "Commercial practice",
+									  handler: function (responses) {
+										if (
+										  typeof responses.razorpay_payment_id == "undefined" ||
+										  responses.razorpay_payment_id < 1
+										) {
+										  swal({
+											title: "Please try again later!",
+											icon: "error",
+											button: "Close",
+										  });
+										} else {
+										  swal({
+											title: "Thank You!",
+											icon: "success",
+											button: "Close",
+										  });
+										}
+									  },
+									  theme: {
+										color: "#3399cc",
+									  },
+									};
+									var rzp6 = new Razorpay(options6);
+									document.getElementById("rzp-button6").onclick = function (
+									  e
+									) {
+									  rzp6.open();
+									  e.preventDefault();
+									};
+								  </script>
+								</form>
+							</div>
 						</div>	
 					</div>
 				</div>
