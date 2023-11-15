@@ -139,12 +139,12 @@ if ($("div").is("#map")){
     ymaps.ready(init);
     function init(){
         var myMap = new ymaps.Map("map", {
-            center: [30.326, 76.400], // Centered at Patiala, Punjab
-            zoom: 10,
+            center: [30.7075, 76.7575], // Centered at Patiala, Punjab
+            zoom: 14,
             controls: ['zoomControl']
         });
 
-        var thaparUniversityCoords = [30.326, 76.400]; // Coordinates for Thapar University
+        var thaparUniversityCoords = [30.7148, 76.7387]; // Coordinates for Thapar University
 
         var thaparMarker = new ymaps.Placemark(thaparUniversityCoords, {
             hintContent: 'Thapar University, Patiala', // Hint displayed when hovering over the marker
